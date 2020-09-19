@@ -1,25 +1,18 @@
+import java.util.Arrays;
+
 public class Media {
-    private String title;
-    private double lengthInMinuets;
-    private String[] actors;
+    public String title;
+    public int lengthInMinuets;
+    public String[] actors;
 
 
-    public Media(String title, double lengthInMinuets, String[] Actors) {
+    public Media(String title, int lengthInMinuets, String[] actors) {
         this.title = title;
         this.lengthInMinuets = lengthInMinuets;
         this.actors = actors;
 
-        String[] movieActors = {"Jelo", "Jim", "Sonia"};
-        String[] tvShowActors = {"Matt", "Lisa", "Jennifer"};
 
-        Media movies = new Media("Angle Eyes", 102, movieActors);
-        Media tvShows = new Media("Friends", 45, tvShowActors);
     }
-
-
-        //System.out.println(movies);
-
-
 
         public String getTitle () {
             return title;
@@ -33,15 +26,19 @@ public class Media {
             return lengthInMinuets;
         }
 
-        public void setLengthInMinuets ( double lengthInMinuets){
+        public void setLengthInMinuets ( int lengthInMinuets){
             this.lengthInMinuets = lengthInMinuets;
         }
 
         public String[] getActors () {
+            String output = Arrays.toString(actors);
+
             return actors;
         }
 
         public void setActors (String[]actors){
+
+
             this.actors = actors;
         }
 
